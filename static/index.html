@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre' Laing's Portfolio</title>
+    <link rel='stylesheet' href='styles.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/27d18d6c02.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'></script>
+</head>
+<body>
+    <div id="particles-js">    
+        <section class='intro-text'>
+            <span> Hello, I'm <span>Andre' Laing</span>.</span>
+            <span>I'm a full-stack web developer.</span>
+            <a href="#projects"><button>View Projects</button></a>
+            <ul class='social-links'>
+                <a href="https://github.com/DreLaing" target="_blank"><i class="fa fa-github"></i></a>
+                <a><i class="fa fa-linkedin"></i></a>
+            </ul>
+        </section>
+    </div>
+    <nav>
+        <ul class='nav-links' >
+            <a href="#particles-js" class='nav-item' id='home-link'>HOME</a>
+            <a href="#projects" class='nav-item' id='projects-link'>PROJECTS</a>
+            <a href='#skills' class='nav-item' id='skills-link'>SKILLS</a>
+            <a href='#education' class='nav-item' id='education-link'>EDUCATION</a>
+            <a href='#contact' class='nav-item' id='contact-link'>CONTACT</a>
+        </ul>
+        <span></span>
+    </nav>
+    <section id='projects'>
+        <h1 class='header fader'>PROJECTS</h1>
+        
+        <!-- TASKIFY -->
+        <div class='project-container'>
+            <div class='project-images-container from-left slider'>
+                <img class='project-image' src='./images/taskify.png' />
+                <img class='project-phone-image' src='./images/taskify-phone.png' />
+            </div>
+
+            <div class='project-description from-right slider'>
+                <p class='project-description-header'>Taskify</p>
+                <p class='project-description-paragraph'>A Task manager app where the user is able to record and organize tasks that they wish to complete.</p>
+                <div class='project-description-technologies'>
+                    <div>
+                        <!-- <img class='icon react-icon' src='./images/icons/react-brands.svg'/> -->
+                        <img class='icon' src="https://img.icons8.com/plasticine/100/000000/react.png" alt='React Icon'/>
+                        <p>ReactJS</p>
+                    </div>
+                    <div>
+                        <!-- <img class='icon node-icon' src='./images/icons/node-brands.svg' /> -->
+                        <img class='icon' src="https://img.icons8.com/color/48/000000/nodejs.png"/>
+                        <p>NodeJS</p> 
+                    </div>
+                    <div>
+                        <img class='icon' src='./images/icons/icons8-mongodb.svg'/>
+                        <p>MongoDB</p>
+                    </div>
+                </div>
+                <a class='link-to-code' href="https://github.com/DreLaing/Taskify" target='_blank'>Github <i class="fa fa-github"></i></a>
+            </div>
+        </div>
+        <hr />
+        <!-- TASKIFY -->
+
+        <!-- BLOG -->
+        <div class='project-container'>
+            <div class='project-images-container from-left slider'>
+                <img class='project-image' src='./images/blog.png' />
+                <img class='project-phone-image' src='./images/blog-phone.png' />
+            </div>
+
+            <div class='project-description from-right slider'>
+                <p class='project-description-header'>Panther Times</p>
+                <p class='project-description-paragraph'>A news blog where users are able to view articles. Admin can post new articles through Contentful</p>
+                <div class='project-description-technologies'>
+                    <div></div>
+                    <div>
+                        <!-- <img class='icon react-icon' src='./images/icons/react-brands.svg'/> -->
+                        <img class='icon' src="https://img.icons8.com/plasticine/100/000000/react.png" alt='React Icon'/>
+                        <p>ReactJS</p>
+                    </div>
+                    <div>
+                        <img class='icon node-icon' src='./images/icons/contentful.svg' />
+                        <p>Contentful CMS</p> 
+                    </div>
+                    <div></div>
+                </div>
+                <a class='link-to-code' href="https://github.com/DreLaing/Taskify" target='_blank'>Github <i class="fa fa-github"></i></a>
+            </div>
+        </div>
+        <!-- BLOG -->
+        <hr />
+        <!-- CAM COP -->
+        <div class='project-container'>
+            <div class='project-images-container from-left slider'>
+                <img class='project-image' src='./images/cam-cop.png' />
+            </div>
+
+            <div class='project-description from-right slider'>
+                <p class='project-description-header'>Cam Cop</p>
+                <p class='project-description-paragraph'>Machine learning software that detects and reads license plates from images.</p>
+                <div class='project-description-technologies'>
+                    <div></div>
+                    <div>
+                        <!-- <img class='icon' src='./images/icons/python-brands.svg' /> -->
+                        <img class='icon' src="https://img.icons8.com/color/48/000000/python.png"/>
+                        <p>Python 3.6</p> 
+                    </div>
+                    <div>
+                        <img class='icon' src="https://img.icons8.com/color/48/000000/postgreesql.png"/>
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div></div>
+                </div>
+                <a class='link-to-code' href="https://github.com/DreLaing/Taskify" target='_blank'>Github <i class="fa fa-github"></i></a>
+            </div>
+        </div>
+        <!-- CAM COP -->
+        <hr />
+        <!-- Adtelligent -->
+        <div class='project-container'>
+            <div class='project-images-container from-left slider'>
+                <img class='project-image' src='./images/course-manager.png' />
+            </div>
+
+            <div class='project-description from-right slider'>
+                <p class='project-description-header'>Course Manager</p>
+                <p class='project-description-paragraph'>An app that compiles courses from different sources on the internet.</p>
+                <div class='project-description-technologies'>
+                    <div>
+                        <!-- <img class='icon react-icon' src='./images/icons/react-brands.svg'/> -->
+                        <img class='icon' src="https://img.icons8.com/plasticine/100/000000/react.png" alt='React Icon'/>
+                        <p>ReactJS</p>
+                    </div>
+                    <div>
+                        <!-- <img class='icon node-icon' src='./images/icons/node-brands.svg' /> -->
+                        <img class='icon' src="https://img.icons8.com/color/48/000000/nodejs.png"/>
+                        <p>NodeJS</p> 
+                    </div>
+                    <div>
+                        <img class='icon' src='./images/icons/icons8-mongodb.svg'/>
+                        <p>MongoDB</p>
+                    </div>
+                </div>
+                <a class='link-to-code' href="https://github.com/DreLaing/Taskify" target='_blank'>Github <i class="fa fa-github"></i></a>
+            </div>
+        </div>
+        <!-- Adtelligent -->
+        
+    </section>
+
+    <section id='skills'>
+        <h1 class='header fader'>SKILLS</h1>
+        <div class='skills-grid'>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/html-5.png"/>
+                <p>HTML5</p>
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/css3.png"/>
+                <p>CSS3</p>
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/javascript.png"/>
+                <p>Javascript</p>
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/plasticine/100/000000/react.png" alt='React Icon'/>
+                <p>ReactJS</p>
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/nodejs.png"/>
+                <p>NodeJS</p> 
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/mongodb.png"/>
+                <p>MongoDB</p> 
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/postgreesql.png"/>
+                <p>PostgreSQL</p> 
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/python.png"/>
+                <p>Python</p> 
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/bootstrap.png" />
+                <p>Bootstrap</p> 
+            </div>
+            <div class='fader'>
+                <img class='skill-icon' src="https://img.icons8.com/color/96/000000/office-365.png"/>
+                <p>Office 365</p> 
+            </div>
+        </div>
+    </section>
+
+    <section id='education'>
+        <h1 class='header fader'>EDUCATION</h1>
+        <div class='education-grid'>
+            <div class='from-left slider education-container'>
+                <img class='education-image' src='./images/uwi-logo.jpg'/>
+                <p>BSc. Computer Science (2016-2020)</p>
+            </div>
+            <div class='education-container from-right slider'>
+                <img class='education-image-jago' src='./images/jago-logo.png' />
+                <p>St.Jago HighSchool (2009-2016)</p>
+                <p>8 CAPE</p>
+                <p>8 CSEC</p>
+            </div>
+        </div>
+    </section>
+    <section id='contact'>
+        <h1 class='header fader'>CONTACT</h1>
+        <p>Send me a message</p>
+        <form class='contact-form fader'>
+            <input id='email' placeholder="Your email address" required/>
+            <textarea id='message' placeholder="Your Message ..." required></textarea>
+            <button type='input'>SUBMIT</button>
+        </form>
+    </section>
+    <div class='footer'>
+        <p>Andre' Laing &#169;2020</p>
+    </div>
+</body>
+
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+</script>
+<script src='app.js'></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>
