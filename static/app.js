@@ -37,8 +37,8 @@ const activeLink = ()=>{
     else if(pathname === 'skills'){
         document.getElementById('skills-link').className = 'active-link'
     }
-    else if(pathname === 'education'){
-        document.getElementById('education-link').className = 'active-link'
+    else if(pathname === 'about'){
+        document.getElementById('about-link').className = 'active-link'
     }
     else if(pathname === 'contact'){
         document.getElementById('contact-link').className = 'active-link'
@@ -112,7 +112,20 @@ sliders.forEach(slider =>{
     projectsObserver.observe(slider)
 })
 
-// SEND EMAIL
+// toggle navbar
+const toggleButton = document.querySelector('.toggle-button')
+const middleBar = document.querySelector('.middle-bar')
+const firstBar = document.querySelector('.first-bar')
+const lastBar = document.querySelector('.last-bar')
+const navLinks = document.querySelector('.nav-links')
+
+toggleButton.addEventListener('click', ()=>{
+    toggleButton.classList.toggle('show')
+    navLinks.classList.toggle('show')
+    firstBar.classList.toggle('show')
+    lastBar.classList.toggle('show')
+    middleBar.classList.toggle('show')
+})
 
 
 
