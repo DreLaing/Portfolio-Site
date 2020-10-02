@@ -1,56 +1,46 @@
-// import axios from 'axios'
-
 const form = document.querySelector('form')
+
+const emailRegex = /\S+@\S+\.\S+/
+
+const validateEmail = (email) =>{
+    return emailRegex.test(email)  
+}
 
 form.addEventListener('submit', e =>{
     e.preventDefault()
-
-    const email = document.getElementById('email').value
+    const email = document.getElementById('email')
     const message = document.getElementById('message').value
 
-    const text = {
-        message: message,
-        from: email
+    if(validateEmail(email.value)){
+        const text = {
+            message: message,
+            from: email.value
+        }
+        console.log(email.value)
+    
+        axios.post(`http://localhost:8080/email`, {
+            email: email.value,
+            text: JSON.stringify(text)
+        })
+        .then(() => {
+            form.reset()
+        })
+        .catch(err => console.log(err))
     }
-
-    axios.post(`http://localhost:8080/email`, {
-        email,
-        text: JSON.stringify(text)
-    })
-    .then(res => {
-        form.reset()
-    })
-    .catch(err => console.log(err))
+    else{
+        email.classList.add('invalid')
+        email.addEventListener('focus', ()=>{
+            email.classList.remove('invalid')
+        })
+    }
 })
 
 
-const activeLink = ()=>{
-    const url = window.location.href
-    const pathname = url.split('#')[1]
-    document.querySelectorAll('.active-link').forEach(link => link.className = 'nav-item')
-    if(pathname === 'particles-js' || pathname===''){
-        document.getElementById('home-link').className = 'active-link'
-    }
-    else if(pathname === 'projects'){
-        document.getElementById('projects-link').className = 'active-link'
-    }
-    else if(pathname === 'skills'){
-        document.getElementById('skills-link').className = 'active-link'
-    }
-    else if(pathname === 'about'){
-        document.getElementById('about-link').className = 'active-link'
-    }
-    else if(pathname === 'contact'){
-        document.getElementById('contact-link').className = 'active-link'
-    }
-}
-
-window.addEventListener('hashchange', activeLink)
-
-
+// section observer to change active links
 const sections = document.querySelectorAll('section')
 const sectionOptions = {
-    threshold: 0.3,
+    threshold: 0.2,
+    rootMargin: '20px 20px -20px -20px'
 }
 const sectionObserver = new IntersectionObserver(function(entries, sectionObserver){
     entries.forEach(entry =>{
@@ -58,15 +48,20 @@ const sectionObserver = new IntersectionObserver(function(entries, sectionObserv
             return;
         }
         else{
-            const url = window.location.href.split("#")[0]
-            window.location.href = url + (`#${entry.target.id}`)
-            // sectionObserver.unobserve(entry.target)
+            document.querySelectorAll('.nav-item').forEach(link => {
+                link.classList.remove('active-link')
+                const id = link.id.split('-')[0]
+                if(id === entry.target.id){
+                    link.classList.add('active-link')                
+                }
+            })
+            
         }
     })
 }, sectionOptions)
 sections.forEach(section => sectionObserver.observe(section))
 
-// ----fade project section header
+// ----fade section header
 const faders = document.querySelectorAll('.fader')
 const fadeOptions = {
     threshold: 0.75,
