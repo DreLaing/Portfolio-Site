@@ -18,7 +18,7 @@ form.addEventListener('submit', e =>{
         }
         console.log(email.value)
     
-        axios.post(`http://localhost:8080/email`, {
+        axios.post(`/email`, {
             email: email.value,
             text: JSON.stringify(text)
         })
