@@ -699,6 +699,15 @@ hr{
     border: 2px solid red;
 }
 
+.confirmation-message{
+    color: rgb(0, 170, 0) !important;
+    display: none;
+}
+
+.show-confirmation{
+    display:block;
+}
+
 @media (max-width:1024px){
     .contact-form{
         width:60%;

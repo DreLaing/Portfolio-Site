@@ -10,6 +10,7 @@ form.addEventListener('submit', e =>{
     e.preventDefault()
     const email = document.getElementById('email')
     const message = document.getElementById('message').value
+    const confirmation = document.querySelector('.confirmation-message')
 
     if(validateEmail(email.value)){
         const text = {
@@ -23,7 +24,11 @@ form.addEventListener('submit', e =>{
             text: JSON.stringify(text)
         })
         .then(() => {
+            confirmation.classList.add('show-confirmation')
             form.reset()
+            email.addEventListener('focus', ()=>{
+                confirmation.classList.remove('show-confirmation')
+            })
         })
         .catch(err => console.log(err))
     }
@@ -31,6 +36,7 @@ form.addEventListener('submit', e =>{
         email.classList.add('invalid')
         email.addEventListener('focus', ()=>{
             email.classList.remove('invalid')
+            confirmation.classList.remove('show-confirmation')
         })
     }
 })
